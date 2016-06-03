@@ -6,9 +6,12 @@ public class Book {
 
 	private String title;
 
-	public Book(String iSBN, String title) {
+	private String author;
+
+	public Book(String isbn, String title, String author) {
 		super();
-		ISBN = iSBN;
+		this.ISBN = isbn;
+		this.author = author;
 		this.title = title;
 	}
 
@@ -16,8 +19,8 @@ public class Book {
 		return ISBN;
 	}
 
-	public void setISBN(String iSBN) {
-		ISBN = iSBN;
+	public void setISBN(String isbn) {
+		ISBN = isbn;
 	}
 
 	public String getTitle() {
@@ -28,9 +31,17 @@ public class Book {
 		this.title = title;
 	}
 
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
 	@Override
 	public String toString() {
-		return "Book [ISBN=" + ISBN + ", title=" + title + "]";
+		return "Book [ISBN=" + ISBN + ", title=" + title + ", author=" + author + "]";
 	}
 
 }
